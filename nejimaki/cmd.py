@@ -18,5 +18,5 @@ def main():
         format="%(levelname)5s\t%(name)10s\t%(message)s",
         level=logging._nameToLevel[args.logging]
     )
-    d = loading.load(args.src)
+    d = loading.load(args.src, format=args.format)
     emitfiles(transform(d), format=args.format, position=args.position or ".")
