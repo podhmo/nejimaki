@@ -1,0 +1,2 @@
+debug: true
+$inherits: ./base/base.yaml

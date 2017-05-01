@@ -1,0 +1,17 @@
+./conf:
+  ./base:
+    base.yaml:
+      logging:
+        asctime: 2013-04-10 15:39:26,014
+        created: 1365604766.014612
+        levelname: INFO
+        message: test message
+        name: logger_name
+  dev.yaml:
+    debug: true
+    $inherits: "./base/base.yaml"
+  staging.yaml:
+    debug: false
+    $inherits: "./base/base.yaml"
+  production.yaml:
+    $inherits: "./staging.yaml"
