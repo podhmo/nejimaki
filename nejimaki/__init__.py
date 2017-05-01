@@ -5,6 +5,11 @@ from dictknife import loading
 logger = logging.getLogger(__name__)
 
 
+def setup():
+    loading.setup()
+    loading.dispather.dumper.add_format(loading.unknown, loading.raw.dump)
+
+
 def transform(data):
     if hasattr(data, "keys"):
         d = OrderedDict()

@@ -1,7 +1,7 @@
 import sys
 import logging
 from dictknife import loading
-from nejimaki import emitfiles, transform
+from nejimaki import emitfiles, transform, setup
 
 
 def main():
@@ -13,7 +13,7 @@ def main():
     parser.add_argument("--position", default=None)
 
     args = parser.parse_args()
-    loading.setup()
+    setup()
     logging.basicConfig(
         format="%(levelname)5s\t%(name)10s\t%(message)s",
         level=logging._nameToLevel[args.logging]
