@@ -30,7 +30,7 @@ testing_extras = tests_require + [
 ]
 
 setup(name='nejimaki',
-      version='0.0',
+      version='0.1.0',
       description='emit files from one yaml file',
       long_description=README + '\n\n' + CHANGES,
       classifiers=[
@@ -39,7 +39,7 @@ setup(name='nejimaki',
       ],
       keywords='',
       author="podhmo",
-      author_email="",
+      author_email="ababjam61@gmail.com",
       url="https://github.com/podhmo/nejimaki",
       packages=find_packages(exclude=["nejimaki.tests"]),
       include_package_data=True,
