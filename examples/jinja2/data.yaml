@@ -1,0 +1,16 @@
+$let:
+  readme-template:
+    $jinja2_template:
+      $load: ./readme.jinja2
+      format: raw
+    format: raw
+body:
+  ./one.md:
+    $readme-template:
+      name: one
+  ./two.md:
+    $readme-template:
+      name: two
+  ./three.md:
+    $readme-template:
+      name: three
