@@ -34,7 +34,11 @@ def merge(d, k, v):
 
 
 def emitfiles(d, format=None, position="."):
-    for name, data in d.items():
-        fpath = os.path.join(position, name)
-        logger.info("emit:%s", os.path.normpath(fpath))
-        loading.dumpfile(data, fpath, format=format)
+    if isinstance(d, (list, tuple)):
+        for x in d:
+            emitfiles(x, format=format, position=position)
+    else:
+        for name, data in d.items():
+            fpath = os.path.join(position, name)
+            logger.info("emit:%s", os.path.normpath(fpath))
+            loading.dumpfile(data, fpath, format=format)
