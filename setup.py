@@ -52,5 +52,7 @@ setup(name='nejimaki',
       tests_require=tests_require,
       test_suite="nejimaki.tests",
       entry_points="""
+      [console_scripts]
+      nejimaki=nejimaki.cmd:main
 """)
 
