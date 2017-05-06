@@ -30,7 +30,7 @@ testing_extras = tests_require + [
 ]
 
 setup(name='nejimaki',
-      version='0.1.1',
+      version='0.1.2',
       description='emit files from one yaml file',
       long_description=README + '\n\n' + CHANGES,
       classifiers=[
